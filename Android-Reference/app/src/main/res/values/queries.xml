@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="query_getLoggedResultsDESC">SELECT tag_id,cardName,eccCheck,onlineCheck,offlineCheck FROM result order by _id desc</string>
+<string name="query_createDb">CREATE TABLE \'result\' (
+  \'_id\' INTEGER AUTOINCREMENT NOT NULL,
+  \'tag_id\' INT(11) NOT NULL,
+  \'block0\' BLOB NOT NULL,
+  \'cardName\' TEXT NOT NULL,
+  \'uuid\' TEXT NOT NULL,
+  \'signature\' TEXT NULL DEFAULT NULL,
+  \'totalMemory\' INT(11) NULL DEFAULT NULL,
+  \'checkResultCode\' INT(11) NOT NULL,
+  \'confidenceLevel\' INT(11) NOT NULL,
+  \'eccCheck\' TINYINT(1) NULL DEFAULT NULL,
+  \'onlineCheck\' TINYINT(1) NULL DEFAULT NULL,
+  \'offlineCheck\' TINYINT(1) NULL DEFAULT NULL,
+  \'creDate\' DATETIME NOT NULL,
+  \'modDate\' DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (\'_id\'),
+  CONSTRAINT \'fk_result_tag\'
+    FOREIGN KEY (\'tag_id\')
+    REFERENCES \'productType\' (\'_id\')
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+CREATE INDEX \'fk_result_tag_idx\' ON \'result\' (\'tag_id\' ASC);
+
+CREATE TABLE \'productType\' (
+  \'_id\' INTEGER NOT NULL,
+  \'cardName\' TEXT NOT NULL,
+  \'productType\' TEXT NOT NULL,
+  PRIMARY KEY (\'_id\'));
+
+CREATE TABLE \'blackList\' (
+  \'_id\' INTEGER NOT NULL,
+  \'productType_id\' INT(11) NULL DEFAULT NULL,
+  \'regEx\' TEXT NOT NULL,
+  \'valid\' TINYINT(1) NOT NULL,
+  \'cardName\' TEXT NULL DEFAULT NULL,
+  PRIMARY KEY (\'_id\'),
+  CONSTRAINT \'fk_blackList_productType1\'
+    FOREIGN KEY (\'productType_id\')
+    REFERENCES \'productType\' (\'_id\')
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+CREATE INDEX \'fk_blackList_productType1_idx\' ON \'blackList\' (\'productType_id\' ASC);
+</string>
+</resources>

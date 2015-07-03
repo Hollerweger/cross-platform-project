@@ -1,0 +1,45 @@
+"Window": {
+	backgroundColor: "#fff",
+	layout: "vertical",
+	width: Titanium.UI.FILL,
+	top: 30,
+	softKeyboardOnFocus: Titanium.UI.Android.SOFT_KEYBOARD_HIDE_ON_FOCUS
+}
+
+
+
+"TextField":{
+	width: Titanium.UI.FILL,
+	textAlign: 'left',
+	softKeyboardOnFocus: Titanium.UI.Android.SOFT_KEYBOARD_DEFAULT_ON_FOCUS
+}
+
+"Label":{
+	top: 15,
+	color: '#900',
+	width: Titanium.UI.FILL,
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_LEFT
+}
+
+".content":{
+	left: 45,
+	right: 30
+}
+
+".heading":{
+	left:30,
+	right: 30
+}
+
+"Switch":{
+	color: 'black'
+}
+
+"ActivityIndicator":{
+	color: 'green',
+  	font: {fontFamily:'Helvetica Neue', fontSize:26, fontWeight:'bold'},
+  	message: 'Loading...',
+	height:Ti.UI.SIZE,
+  	width:Ti.UI.FILL,
+  	style: Ti.UI.ActivityIndicatorStyle.DARK
+}

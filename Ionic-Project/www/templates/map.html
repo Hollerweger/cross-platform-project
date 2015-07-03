@@ -1,0 +1,9 @@
+<ion-view view-title="Maps View">
+  <ion-content>
+      <ion-list>
+     <button ng-click="getPosition()" class="button button-block button-primary">Get Position</button>
+      <lable class="item item-input item-stacked-label">Latitude: {{lastPosition.coords.latitude}}</lable>
+      <lable class="item item-input item-stacked-label">Longitude: {{lastPosition.coords.longitude}}</lable>
+      </ion-list>
+  </ion-content>
+</ion-view>

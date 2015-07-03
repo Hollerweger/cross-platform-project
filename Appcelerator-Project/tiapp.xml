@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <id>com.mhollerweger.titaniumSampleProject</id>
+    <name>Sample Project</name>
+    <version>1.0</version>
+    <publisher>MHollerweger</publisher>
+    <url>http://</url>
+    <description>undefined</description>
+    <copyright>2015 by MHollerweger</copyright>
+    <icon>appicon.png</icon>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>220aa687-ccb9-481c-a340-8d513052a72c</guid>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
+    <ios>
+        <plist>
+            <dict>
+                <key>UISupportedInterfaceOrientations~iphone</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                </array>
+                <key>UISupportedInterfaceOrientations~ipad</key>
+                <array>
+                    <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
+                </array>
+                <key>UIRequiresPersistentWiFi</key>
+                <false/>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+                <key>UIStatusBarHidden</key>
+                <false/>
+                <key>UIStatusBarStyle</key>
+                <string>UIStatusBarStyleDefault</string>
+            </dict>
+        </plist>
+    </ios>
+    <android xmlns:android="http://schemas.android.com/apk/res/android">
+        <manifest>
+            <application android:theme="@style/materialTheme"/>
+        </manifest>
+    </android>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="iphone" version="0.2.2">yy.tidynamicfont</module>
+        <module platform="iphone" version="0.5">net.iamyellow.tiws</module>
+        <module platform="android" version="0.1.2">net.iamyellow.tiws</module>
+        <module platform="iphone" version="0.2.0">yy.logcatcher</module>
+        <module platform="android" version="0.1">yy.logcatcher</module>
+        <module platform="iphone" version="1.1.1">ti.compression</module>
+        <module platform="android" version="2.0.3">ti.compression</module>
+        <module platform="android">bencoding.android.tools</module>
+        <module platform="android">ti.physicalsizecategory</module>
+    </modules>
+  <property name="tishadow:version" type="string">2.8.1</property>
+  <property name="ti.android.bug2373.finishfalseroot" type="bool">true</property>
+    
+    <property name="ti.android.bug2373.skipAlert" type="bool">true</property>
+    
+    <deployment-targets>
+        <target device="android">true</target>
+        <target device="blackberry">false</target>
+        <target device="ipad">true</target>
+        <target device="iphone">true</target>
+        <target device="mobileweb">true</target>
+    </deployment-targets>
+    <sdk-version>4.0.0.RC</sdk-version>
+    <plugins>
+        <plugin version="1.0">ti.alloy</plugin>
+    </plugins>
+</ti:app>

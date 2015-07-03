@@ -1,0 +1,41 @@
+<Alloy>
+	<TabGroup>
+		<Tab title="UI Elements">
+			<Window id="ui_elements" title="UI Elements View">
+				<Label class="heading">Textinput</Label>
+				<TextField class="content">Textinput</TextField>
+				
+				<Label class="heading">Slider</Label>
+				<Slider class="content"></Slider>
+				
+				<Label class="heading">Toggle</Label>
+				<Switch class="content"></Switch>
+				
+				<Label class="heading">Spinner</Label>
+				<ActivityIndicator class="content">Loading...</ActivityIndicator>
+				
+				<Label class="heading">Button</Label>
+				<Button class="content">Button</Button>
+			</Window>
+		</Tab>
+		<Tab title="Camera">
+			<Window id="camera_view" title="Camera View">
+					<Button class="content" onClick="openCamera">Take a Photo</Button>
+					<ImageView id="cameraImage"></ImageView>
+			</Window>
+		</Tab>
+		<Tab title="Map">
+			<Window id="maps_view" title="Maps View">
+				<Label class="heading">Location</Label>
+				<Button class="content" onClick="requestLocation">Request Location</Button>
+				
+				<Label class="heading">Latitude</Label>
+				<Label class="content" id="latitude">...</Label>
+				
+				<Label class="heading">Longitude</Label>
+				<Label class="content" id="longitude">...</Label>
+			</Window>
+		</Tab>
+
+	</TabGroup>
+</Alloy>

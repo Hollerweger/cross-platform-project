@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".NavigationDrawerFragment"
+    style="@style/LinearLayout">
+
+
+    <TextView
+        android:text="Textinput"
+        style="@style/elementHeading" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        style="@style/intendedText" />
+
+    <TextView
+        android:text="Slider"
+        style="@style/elementHeading" />
+
+    <SeekBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        style="@style/intendedText" />
+
+    <TextView
+       android:text="Switch"
+        style="@style/elementHeading" />
+
+    <Switch
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        style="@style/elementHeading"
+       android:text="Spinner"
+       />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_gravity="right" />
+
+    <TextView
+        android:text="Button"
+        style="@style/elementHeading" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button3"
+        style="@style/intendedText" />
+
+
+</LinearLayout>
